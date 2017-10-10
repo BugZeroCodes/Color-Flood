@@ -1,159 +1,169 @@
-## 3.3.0 (2016-07-25)
+# Change Log
 
-### Bug fixes
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-Fix bug in tokenizing of regexp operator after a function declaration.
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/yargs/yargs-parser/compare/v4.2.1...v5.0.0) (2017-02-18)
 
-Fix parser crash when parsing an array pattern with a hole.
 
-### New features
+### Bug Fixes
 
-Implement check against complex argument lists in functions that
-enable strict mode in ES7.
+* environment variables should take precedence over config file ([#81](https://github.com/yargs/yargs-parser/issues/81)) ([76cee1f](https://github.com/yargs/yargs-parser/commit/76cee1f))
 
-## 3.2.0 (2016-06-07)
 
-### Bug fixes
+### BREAKING CHANGES
 
-Improve handling of lack of unicode regexp support in host
-environment.
+* environment variables will now override config files (args, env, config-file, config-object)
 
-Properly reject shorthand properties whose name is a keyword.
 
-Don't crash when the loose parser is called without options object.
 
-### New features
+<a name="4.2.1"></a>
+## [4.2.1](https://github.com/yargs/yargs-parser/compare/v4.2.0...v4.2.1) (2017-01-02)
 
-Visitors created with `visit.make` now have their base as _prototype_,
-rather than copying properties into a fresh object.
 
-Make it possible to use `visit.ancestor` with a walk state.
+### Bug Fixes
 
-## 3.1.0 (2016-04-18)
+* flatten/duplicate regression ([#75](https://github.com/yargs/yargs-parser/issues/75)) ([68d68a0](https://github.com/yargs/yargs-parser/commit/68d68a0))
 
-### Bug fixes
 
-Fix issue where the loose parser created invalid TemplateElement nodes
-for unclosed template literals.
 
-Properly tokenize the division operator directly after a function
-expression.
+<a name="4.2.0"></a>
+# [4.2.0](https://github.com/yargs/yargs-parser/compare/v4.1.0...v4.2.0) (2016-12-01)
 
-Allow trailing comma in destructuring arrays.
 
-### New features
+### Bug Fixes
 
-The walker now allows defining handlers for `CatchClause` nodes.
+* inner objects in configs had their keys appended to top-level key when dot-notation was disabled ([#72](https://github.com/yargs/yargs-parser/issues/72)) ([0b1b5f9](https://github.com/yargs/yargs-parser/commit/0b1b5f9))
 
-## 3.0.4 (2016-02-25)
 
-### Fixes
+### Features
 
-Allow update expressions as left-hand-side of the ES7 exponential
-operator.
+* allow multiple arrays to be provided, rather than always combining ([#71](https://github.com/yargs/yargs-parser/issues/71)) ([0f0fb2d](https://github.com/yargs/yargs-parser/commit/0f0fb2d))
 
-## 3.0.2 (2016-02-10)
 
-### Fixes
 
-Fix bug that accidentally made `undefined` a reserved word when
-parsing ES7.
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/yargs/yargs-parser/compare/v4.0.2...v4.1.0) (2016-11-07)
 
-## 3.0.0 (2016-02-10)
 
-### Breaking changes
+### Features
 
-The default value of the `ecmaVersion` option is now 6 (used to be 5).
+* apply coercions to default options ([#65](https://github.com/yargs/yargs-parser/issues/65)) ([c79052b](https://github.com/yargs/yargs-parser/commit/c79052b))
+* handle dot notation boolean options ([#63](https://github.com/yargs/yargs-parser/issues/63)) ([02c3545](https://github.com/yargs/yargs-parser/commit/02c3545))
 
-Support for comprehension syntax (which was dropped from the draft
-spec) has been removed.
 
-### Fixes
 
-`let` and `yield` are now “contextual keywords”, meaning you can
-mostly use them as identifiers in ES5 non-strict code.
+<a name="4.0.2"></a>
+## [4.0.2](https://github.com/yargs/yargs-parser/compare/v4.0.1...v4.0.2) (2016-09-30)
 
-A parenthesized class or function expression after `export default` is
-now parsed correctly.
 
-### New features
+### Bug Fixes
 
-When `ecmaVersion` is set to 7, Acorn will parse the exponentiation
-operator (`**`).
+* whoops, let's make the assign not change the Object key order ([29d069a](https://github.com/yargs/yargs-parser/commit/29d069a))
 
-The identifier character ranges are now based on Unicode 8.0.0.
 
-Plugins can now override the `raiseRecoverable` method to override the
-way non-critical errors are handled.
 
-## 2.7.0 (2016-01-04)
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/yargs/yargs-parser/compare/v4.0.0...v4.0.1) (2016-09-30)
 
-### Fixes
 
-Stop allowing rest parameters in setters.
+### Bug Fixes
 
-Make sure the loose parser always attaches a `local` property to
-`ImportNamespaceSpecifier` nodes.
+* lodash.assign was deprecated ([#59](https://github.com/yargs/yargs-parser/issues/59)) ([5e7eb11](https://github.com/yargs/yargs-parser/commit/5e7eb11))
 
-Disallow `y` rexexp flag in ES5.
 
-Disallow `\00` and `\000` escapes in strict mode.
 
-Raise an error when an import name is a reserved word.
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/yargs/yargs-parser/compare/v3.2.0...v4.0.0) (2016-09-26)
 
-## 2.6.4 (2015-11-12)
 
-### Fixes
+### Bug Fixes
 
-Fix crash in loose parser when parsing invalid object pattern.
+* coerce should be applied to the final objects and arrays created ([#57](https://github.com/yargs/yargs-parser/issues/57)) ([4ca69da](https://github.com/yargs/yargs-parser/commit/4ca69da))
 
-### New features
 
-Support plugins in the loose parser.
+### BREAKING CHANGES
 
-## 2.6.2 (2015-11-10)
+* coerce is no longer applied to individual arguments in an implicit array.
 
-### Fixes
 
-Don't crash when no options object is passed.
 
-## 2.6.0 (2015-11-09)
+<a name="3.2.0"></a>
+# [3.2.0](https://github.com/yargs/yargs-parser/compare/v3.1.0...v3.2.0) (2016-08-13)
 
-### Fixes
 
-Add `await` as a reserved word in module sources.
+### Features
 
-Disallow `yield` in a parameter default value for a generator.
+* coerce full array instead of each element ([#51](https://github.com/yargs/yargs-parser/issues/51)) ([cc4dc56](https://github.com/yargs/yargs-parser/commit/cc4dc56))
 
-Forbid using a comma after a rest pattern in an array destructuring.
 
-### New features
 
-Support parsing stdin in command-line tool.
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/yargs/yargs-parser/compare/v3.0.0...v3.1.0) (2016-08-09)
 
-## 2.5.2 (2015-10-27)
 
-### Fixes
+### Bug Fixes
 
-Fix bug where the walker walked an exported `let` statement as an
-expression.
+* address pkgConf parsing bug outlined in [#37](https://github.com/yargs/yargs-parser/issues/37) ([#45](https://github.com/yargs/yargs-parser/issues/45)) ([be76ee6](https://github.com/yargs/yargs-parser/commit/be76ee6))
+* better parsing of negative values ([#44](https://github.com/yargs/yargs-parser/issues/44)) ([2e43692](https://github.com/yargs/yargs-parser/commit/2e43692))
+* check aliases when guessing defaults for arguments fixes [#41](https://github.com/yargs/yargs-parser/issues/41) ([#43](https://github.com/yargs/yargs-parser/issues/43)) ([f3e4616](https://github.com/yargs/yargs-parser/commit/f3e4616))
 
-## 2.5.0 (2015-10-27)
 
-### Fixes
+### Features
 
-Fix tokenizer support in the command-line tool.
+* added coerce option, for providing specialized argument parsing ([#42](https://github.com/yargs/yargs-parser/issues/42)) ([7b49cd2](https://github.com/yargs/yargs-parser/commit/7b49cd2))
 
-In the loose parser, don't allow non-string-literals as import
-sources.
 
-Stop allowing `new.target` outside of functions.
 
-Remove legacy `guard` and `guardedHandler` properties from try nodes.
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/yargs/yargs-parser/compare/v2.4.1...v3.0.0) (2016-08-07)
 
-Stop allowing multiple `__proto__` properties on an object literal in
-strict mode.
 
-Don't allow rest parameters to be non-identifier patterns.
+### Bug Fixes
 
-Check for duplicate paramter names in arrow functions.
+* parsing issue with numeric character in group of options ([#19](https://github.com/yargs/yargs-parser/issues/19)) ([f743236](https://github.com/yargs/yargs-parser/commit/f743236))
+* upgraded lodash.assign ([5d7fdf4](https://github.com/yargs/yargs-parser/commit/5d7fdf4))
+
+### BREAKING CHANGES
+
+* subtle change to how values are parsed in a group of single-character arguments.
+* _first released in 3.1.0, better handling of negative values should be considered a breaking change._
+
+
+
+<a name="2.4.1"></a>
+## [2.4.1](https://github.com/yargs/yargs-parser/compare/v2.4.0...v2.4.1) (2016-07-16)
+
+
+### Bug Fixes
+
+* **count:** do not increment a default value ([#39](https://github.com/yargs/yargs-parser/issues/39)) ([b04a189](https://github.com/yargs/yargs-parser/commit/b04a189))
+
+
+
+<a name="2.4.0"></a>
+# [2.4.0](https://github.com/yargs/yargs-parser/compare/v2.3.0...v2.4.0) (2016-04-11)
+
+
+### Features
+
+* **environment:** Support nested options in environment variables ([#26](https://github.com/yargs/yargs-parser/issues/26)) thanks [@elas7](https://github.com/elas7) \o/ ([020778b](https://github.com/yargs/yargs-parser/commit/020778b))
+
+
+
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/yargs/yargs-parser/compare/v2.2.0...v2.3.0) (2016-04-09)
+
+
+### Bug Fixes
+
+* **boolean:** fix for boolean options with non boolean defaults (#20) ([2dbe86b](https://github.com/yargs/yargs-parser/commit/2dbe86b)), closes [(#20](https://github.com/(/issues/20)
+* **package:** remove tests from tarball ([0353c0d](https://github.com/yargs/yargs-parser/commit/0353c0d))
+* **parsing:** handle calling short option with an empty string as the next value. ([a867165](https://github.com/yargs/yargs-parser/commit/a867165))
+* boolean flag when next value contains the strings 'true' or 'false'. ([69941a6](https://github.com/yargs/yargs-parser/commit/69941a6))
+* update dependencies; add standard-version bin for next release (#24) ([822d9d5](https://github.com/yargs/yargs-parser/commit/822d9d5))
+
+### Features
+
+* **configuration:** Allow to pass configuration objects to yargs-parser ([0780900](https://github.com/yargs/yargs-parser/commit/0780900))
+* **normalize:** allow normalize to work with arrays ([e0eaa1a](https://github.com/yargs/yargs-parser/commit/e0eaa1a))
