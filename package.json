@@ -2,116 +2,114 @@
   "_args": [
     [
       {
-        "raw": "align-text@^0.1.3",
+        "raw": "ajv-keywords@^2.1.0",
         "scope": null,
-        "escapedName": "align-text",
-        "name": "align-text",
-        "rawSpec": "^0.1.3",
-        "spec": ">=0.1.3 <0.2.0",
+        "escapedName": "ajv-keywords",
+        "name": "ajv-keywords",
+        "rawSpec": "^2.1.0",
+        "spec": ">=2.1.0 <3.0.0",
         "type": "range"
       },
-      "/Users/timothy/colorflood/node_modules/center-align"
+      "/Users/timothy/colorflood/node_modules/table"
     ]
   ],
-  "_from": "align-text@>=0.1.3 <0.2.0",
-  "_id": "align-text@0.1.4",
+  "_from": "ajv-keywords@>=2.1.0 <3.0.0",
+  "_id": "ajv-keywords@2.1.0",
   "_inCache": true,
-  "_location": "/align-text",
-  "_nodeVersion": "5.5.0",
+  "_location": "/ajv-keywords",
+  "_nodeVersion": "4.6.1",
   "_npmOperationalInternal": {
-    "host": "packages-9-west.internal.npmjs.com",
-    "tmp": "tmp/align-text-0.1.4.tgz_1454377856920_0.9624228512402624"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ajv-keywords-2.1.0.tgz_1496088346630_0.025764777790755033"
   },
   "_npmUser": {
-    "name": "shinnn",
-    "email": "snnskwtnb@gmail.com"
+    "name": "esp",
+    "email": "e.poberezkin@me.com"
   },
-  "_npmVersion": "3.6.0",
+  "_npmVersion": "2.15.9",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "align-text@^0.1.3",
+    "raw": "ajv-keywords@^2.1.0",
     "scope": null,
-    "escapedName": "align-text",
-    "name": "align-text",
-    "rawSpec": "^0.1.3",
-    "spec": ">=0.1.3 <0.2.0",
+    "escapedName": "ajv-keywords",
+    "name": "ajv-keywords",
+    "rawSpec": "^2.1.0",
+    "spec": ">=2.1.0 <3.0.0",
     "type": "range"
   },
   "_requiredBy": [
-    "/center-align",
-    "/right-align"
+    "/table",
+    "/webpack"
   ],
-  "_resolved": "https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz",
-  "_shasum": "0cd90a561093f35d0a99256c22b7069433fad117",
+  "_resolved": "https://registry.npmjs.org/ajv-keywords/-/ajv-keywords-2.1.0.tgz",
+  "_shasum": "a296e17f7bfae7c1ce4f7e0de53d29cb32162df0",
   "_shrinkwrap": null,
-  "_spec": "align-text@^0.1.3",
-  "_where": "/Users/timothy/colorflood/node_modules/center-align",
+  "_spec": "ajv-keywords@^2.1.0",
+  "_where": "/Users/timothy/colorflood/node_modules/table",
   "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
+    "name": "Evgeny Poberezkin"
   },
   "bugs": {
-    "url": "https://github.com/jonschlinkert/align-text/issues"
+    "url": "https://github.com/epoberezkin/ajv-keywords/issues"
   },
-  "dependencies": {
-    "kind-of": "^3.0.2",
-    "longest": "^1.0.1",
-    "repeat-string": "^1.5.2"
-  },
-  "description": "Align the text in a string.",
+  "dependencies": {},
+  "description": "Custom JSON-Schema keywords for Ajv validator",
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "word-wrap": "^1.0.3"
+    "ajv": "^5.0.0",
+    "ajv-pack": "^0.3.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "dot": "^1.1.1",
+    "eslint": "^3.6.0",
+    "glob": "^7.1.1",
+    "istanbul": "^0.4.3",
+    "js-beautify": "^1.6.4",
+    "json-schema-test": "^1.3.0",
+    "mocha": "^3.0.2",
+    "pre-commit": "^1.1.3",
+    "uuid": "^3.0.1"
   },
   "directories": {},
   "dist": {
-    "shasum": "0cd90a561093f35d0a99256c22b7069433fad117",
-    "tarball": "https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz"
-  },
-  "engines": {
-    "node": ">=0.10.0"
+    "shasum": "a296e17f7bfae7c1ce4f7e0de53d29cb32162df0",
+    "tarball": "https://registry.npmjs.org/ajv-keywords/-/ajv-keywords-2.1.0.tgz"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "keywords"
   ],
-  "gitHead": "7f08e823a54c6bda319d875895813537a66a4c5e",
-  "homepage": "https://github.com/jonschlinkert/align-text",
+  "gitHead": "19fdbe34e9d9067f19142a6e94815b33ff66edcd",
+  "homepage": "https://github.com/epoberezkin/ajv-keywords#readme",
   "keywords": [
-    "align",
-    "align-center",
-    "alignment",
-    "center",
-    "center-align",
-    "indent",
-    "pad",
-    "padding",
-    "right",
-    "right-align",
-    "text",
-    "typography"
+    "JSON-Schema",
+    "ajv",
+    "keywords"
   ],
   "license": "MIT",
   "main": "index.js",
   "maintainers": [
     {
-      "name": "jonschlinkert",
-      "email": "github@sellside.com"
-    },
-    {
-      "name": "shinnn",
-      "email": "snnskwtnb@gmail.com"
+      "name": "esp",
+      "email": "e.poberezkin@me.com"
     }
   ],
-  "name": "align-text",
+  "name": "ajv-keywords",
   "optionalDependencies": {},
+  "peerDependencies": {
+    "ajv": ">=5.0.0"
+  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jonschlinkert/align-text.git"
+    "url": "git+https://github.com/epoberezkin/ajv-keywords.git"
   },
   "scripts": {
-    "test": "mocha"
+    "build": "node node_modules/ajv/scripts/compile-dots.js node_modules/ajv/lib keywords",
+    "eslint": "eslint index.js keywords/*.js",
+    "prepublish": "npm run build",
+    "test": "npm run build && npm run eslint && npm run test-cov",
+    "test-cov": "istanbul cover -x 'spec/**' node_modules/mocha/bin/_mocha -- spec/*.spec.js -R spec",
+    "test-spec": "mocha spec/*.spec.js -R spec"
   },
-  "version": "0.1.4"
+  "version": "2.1.0"
 }
