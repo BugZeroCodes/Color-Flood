@@ -2,107 +2,116 @@
   "_args": [
     [
       {
-        "raw": "array-map@~0.0.0",
+        "raw": "align-text@^0.1.3",
         "scope": null,
-        "escapedName": "array-map",
-        "name": "array-map",
-        "rawSpec": "~0.0.0",
-        "spec": ">=0.0.0 <0.1.0",
+        "escapedName": "align-text",
+        "name": "align-text",
+        "rawSpec": "^0.1.3",
+        "spec": ">=0.1.3 <0.2.0",
         "type": "range"
       },
-      "/Users/timothy/colorflood/node_modules/shell-quote"
+      "/Users/timothy/colorflood/node_modules/center-align"
     ]
   ],
-  "_from": "array-map@>=0.0.0 <0.1.0",
-  "_id": "array-map@0.0.0",
+  "_from": "align-text@>=0.1.3 <0.2.0",
+  "_id": "align-text@0.1.4",
   "_inCache": true,
-  "_location": "/array-map",
-  "_npmUser": {
-    "name": "substack",
-    "email": "mail@substack.net"
+  "_location": "/align-text",
+  "_nodeVersion": "5.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-9-west.internal.npmjs.com",
+    "tmp": "tmp/align-text-0.1.4.tgz_1454377856920_0.9624228512402624"
   },
-  "_npmVersion": "1.3.21",
+  "_npmUser": {
+    "name": "shinnn",
+    "email": "snnskwtnb@gmail.com"
+  },
+  "_npmVersion": "3.6.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "array-map@~0.0.0",
+    "raw": "align-text@^0.1.3",
     "scope": null,
-    "escapedName": "array-map",
-    "name": "array-map",
-    "rawSpec": "~0.0.0",
-    "spec": ">=0.0.0 <0.1.0",
+    "escapedName": "align-text",
+    "name": "align-text",
+    "rawSpec": "^0.1.3",
+    "spec": ">=0.1.3 <0.2.0",
     "type": "range"
   },
   "_requiredBy": [
-    "/shell-quote"
+    "/center-align",
+    "/right-align"
   ],
-  "_resolved": "https://registry.npmjs.org/array-map/-/array-map-0.0.0.tgz",
-  "_shasum": "88a2bab73d1cf7bcd5c1b118a003f66f665fa662",
+  "_resolved": "https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz",
+  "_shasum": "0cd90a561093f35d0a99256c22b7069433fad117",
   "_shrinkwrap": null,
-  "_spec": "array-map@~0.0.0",
-  "_where": "/Users/timothy/colorflood/node_modules/shell-quote",
+  "_spec": "align-text@^0.1.3",
+  "_where": "/Users/timothy/colorflood/node_modules/center-align",
   "author": {
-    "name": "James Halliday",
-    "email": "mail@substack.net",
-    "url": "http://substack.net"
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
   },
   "bugs": {
-    "url": "https://github.com/substack/array-map/issues"
+    "url": "https://github.com/jonschlinkert/align-text/issues"
   },
-  "dependencies": {},
-  "description": "`[].map(f)` for older browsers",
+  "dependencies": {
+    "kind-of": "^3.0.2",
+    "longest": "^1.0.1",
+    "repeat-string": "^1.5.2"
+  },
+  "description": "Align the text in a string.",
   "devDependencies": {
-    "tape": "~2.3.2"
+    "mocha": "*",
+    "should": "*",
+    "word-wrap": "^1.0.3"
   },
   "directories": {},
   "dist": {
-    "shasum": "88a2bab73d1cf7bcd5c1b118a003f66f665fa662",
-    "tarball": "https://registry.npmjs.org/array-map/-/array-map-0.0.0.tgz"
+    "shasum": "0cd90a561093f35d0a99256c22b7069433fad117",
+    "tarball": "https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz"
   },
-  "homepage": "https://github.com/substack/array-map",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "gitHead": "7f08e823a54c6bda319d875895813537a66a4c5e",
+  "homepage": "https://github.com/jonschlinkert/align-text",
   "keywords": [
-    "array",
-    "map",
-    "browser",
-    "es5",
-    "shim",
-    "ie6",
-    "ie7",
-    "ie8"
+    "align",
+    "align-center",
+    "alignment",
+    "center",
+    "center-align",
+    "indent",
+    "pad",
+    "padding",
+    "right",
+    "right-align",
+    "text",
+    "typography"
   ],
   "license": "MIT",
   "main": "index.js",
   "maintainers": [
     {
-      "name": "substack",
-      "email": "mail@substack.net"
+      "name": "jonschlinkert",
+      "email": "github@sellside.com"
+    },
+    {
+      "name": "shinnn",
+      "email": "snnskwtnb@gmail.com"
     }
   ],
-  "name": "array-map",
+  "name": "align-text",
   "optionalDependencies": {},
-  "readme": "# array-map\n\n`[].map(f)` for older browsers\n\n[![testling badge](https://ci.testling.com/substack/array-map.png)](https://ci.testling.com/substack/array-map)\n\n[![build status](https://secure.travis-ci.org/substack/array-map.png)](http://travis-ci.org/substack/array-map)\n\n# example\n\n``` js\nvar map = require('array-map');\nvar letters = map([97,98,99], function (c) {\n    return String.fromCharCode(c);\n});\nconsole.log(letters.join(''));\n```\n\noutput:\n\n```\nabc\n```\n\n# methods\n\n``` js\nvar map = require('array-map')\n```\n\n## var ys = map(xs, f)\n\nCreate a new array `ys` by applying `f(xs[i], i, xs)` to each element in `xs` at\nindex `i`.\n\n# install\n\nWith [npm](https://npmjs.org) do:\n\n```\nnpm install array-map\n```\n\n# license\n\nMIT\n",
-  "readmeFilename": "readme.markdown",
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/array-map.git"
+    "url": "git://github.com/jonschlinkert/align-text.git"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "mocha"
   },
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/6..latest",
-      "firefox/3.5",
-      "firefox/latest",
-      "chrome/5",
-      "chrome/latest",
-      "opera/12..latest",
-      "opera/next",
-      "safari/5.1..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "android-browser/4.2..latest"
-    ]
-  },
-  "version": "0.0.0"
+  "version": "0.1.4"
 }
