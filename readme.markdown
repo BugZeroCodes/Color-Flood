@@ -1,44 +1,44 @@
-# array-map
+# array-reduce
 
-`[].map(f)` for older browsers
+`[].reduce()` for old browsers
 
-[![testling badge](https://ci.testling.com/substack/array-map.png)](https://ci.testling.com/substack/array-map)
+[![testling badge](https://ci.testling.com/substack/array-reduce.png)](https://ci.testling.com/substack/array-reduce)
 
-[![build status](https://secure.travis-ci.org/substack/array-map.png)](http://travis-ci.org/substack/array-map)
+[![build status](https://secure.travis-ci.org/substack/array-reduce.png)](http://travis-ci.org/substack/array-reduce)
 
 # example
 
-``` js
-var map = require('array-map');
-var letters = map([97,98,99], function (c) {
-    return String.fromCharCode(c);
-});
-console.log(letters.join(''));
+```
+var reduce = require('array-reduce');
+var xs = [ 1, 2, 3, 4 ];
+var sum = reduce(xs, function (acc, x) { return acc + x }, 0);
+console.log(sum);
 ```
 
 output:
 
 ```
-abc
+10
 ```
 
 # methods
 
 ``` js
-var map = require('array-map')
+var reduce = require('array-reduce')
 ```
 
-## var ys = map(xs, f)
+## var res = reduce(xs, f, init)
 
-Create a new array `ys` by applying `f(xs[i], i, xs)` to each element in `xs` at
-index `i`.
+Create a result `res` by folding `acc = f(acc, xs[i], i)` over each element in
+the array `xs` at element `i`. If `init` is given, the first `acc` value is
+`init`, otherwise `xs[0]` is used.
 
 # install
 
 With [npm](https://npmjs.org) do:
 
 ```
-npm install array-map
+npm install array-reduce
 ```
 
 # license

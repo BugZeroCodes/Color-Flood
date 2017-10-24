@@ -1,55 +1,34 @@
-# camelcase [![Build Status](https://travis-ci.org/sindresorhus/camelcase.svg?branch=master)](https://travis-ci.org/sindresorhus/camelcase)
+# arrify [![Build Status](https://travis-ci.org/sindresorhus/arrify.svg?branch=master)](https://travis-ci.org/sindresorhus/arrify)
 
-> Convert a dash/dot/underscore/space separated string to camelCase: `foo-bar` → `fooBar`
+> Convert a value to an array
 
 
 ## Install
 
 ```
-$ npm install --save camelcase
+$ npm install --save arrify
 ```
 
 
 ## Usage
 
 ```js
-const camelCase = require('camelcase');
+const arrify = require('arrify');
 
-camelCase('foo-bar');
-//=> 'fooBar'
+arrify('unicorn');
+//=> ['unicorn']
 
-camelCase('foo_bar');
-//=> 'fooBar'
+arrify(['unicorn']);
+//=> ['unicorn']
 
-camelCase('Foo-Bar');
-//=> 'fooBar'
+arrify(null);
+//=> []
 
-camelCase('--foo.bar');
-//=> 'fooBar'
-
-camelCase('__foo__bar__');
-//=> 'fooBar'
-
-camelCase('foo bar');
-//=> 'fooBar'
-
-console.log(process.argv[3]);
-//=> '--foo-bar'
-camelCase(process.argv[3]);
-//=> 'fooBar'
-
-camelCase('foo', 'bar');
-//=> 'fooBar'
-
-camelCase('__foo__', '--bar');
-//=> 'fooBar'
+arrify(undefined);
+//=> []
 ```
 
-
-## Related
-
-- [decamelize](https://github.com/sindresorhus/decamelize) - The inverse of this module
-- [uppercamelcase](https://github.com/SamVerschueren/uppercamelcase) - Like this module, but to PascalCase instead of camelCase
+*Supplying `null` or `undefined` results in an empty array.*
 
 
 ## License
