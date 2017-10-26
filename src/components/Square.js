@@ -4,7 +4,7 @@ class Square extends Component {
   render() {
     const initStyling = {width: '50px', height: '50px', backgroundColor: randomColor()}
     function randomColor() {
-      var colors = ['red', 'yellow', 'orange', 'green', 'blue', 'lightblue']
+      var colors = ['red', 'yellow', 'orange', 'green', 'blue', 'lightblue', 'maroon']
       return colors[Math.floor(Math.random() * colors.length)]
     }
     return (
